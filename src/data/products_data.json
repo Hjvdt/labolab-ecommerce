@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "Microtubos",
+        "description": " ",
+        "stock": 100,
+        "unidad": "unidad",
+        "category": "tubos",
+        "images": "microtubos.jpg",
+        "price": 25.99
+    },
+    {
+        "id": 2,
+        "title": "Pipetas",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "vidrio",
+        "images": "https://img.freepik.com/foto-gratis/investigador-primer-plano-pipeta-tubo_23-2148794438.jpg?w=360&t=st=1702418261~exp=1702418861~hmac=fdd4c5fe2154ebd9da2bbad6a59208f29022239ea3de2ca0b83aa2485ebb329e",
+        "price": 12.50
+    },
+    {
+        "id": 3,
+        "title": "Tubos de orina conicos",
+        "description": " ",
+        "stock": 200,
+        "unidad": "unidad",
+        "category": "tubos",
+        "images": "https://img.freepik.com/free-photo/laboratory-glassware-with-chemical-liquid_329181-20220.jpg?w=826&t=st=1702418318~exp=1702418918~hmac=8fa49c9db8e92fcc336e322891dc0e7bd77132cce7c28669eda6f99db776e63b",
+        "price": 18.75
+    },
+    {
+        "id": 4,
+        "title": "Microcentrífuga/Centrifuga",
+        "description": " ",
+        "stock": 2,
+        "unidad": "unidad",
+        "category": "equipos",
+        "images": "https://img.freepik.com/free-photo/preparation-blood-injections-cosmetologist-puts-tube-blood-centrifuge_651396-3082.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 249.99
+    },
+    {
+        "id": 5,
+        "title": "Probetas",
+        "description": " ",
+        "stock": 5,
+        "unidad": "unidad",
+        "category": "vidrio",
+        "images": "https://img.freepik.com/free-photo/still-life-world-science-day-chemistry-arrangement_23-2149132699.jpg?w=360&t=st=1702419268~exp=1702419868~hmac=08710e81bc9713b536d0aaf62d6a9b09d0c43ace2dd29f9542e159926e94ae5a",
+        "price": 32.00
+    },
+    {
+        "id": 6,
+        "title": "Erlenmeyer",
+        "description": " ",
+        "stock": 3,
+        "unidad": "unidad",
+        "category": "vidrio",
+        "images": "https://img.freepik.com/free-photo/closeup-shot-tubes-inside-erlenmeyer-beakers_181624-34112.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 22.50
+    },
+    {
+        "id": 7,
+        "title": "Guantes de látex S-M-L",
+        "description": " ",
+        "stock": 500,
+        "unidad": "par",
+        "category": "latex",
+        "images": "https://img.freepik.com/free-photo/hand-wearing-white-latex-glove-prevent-coronavirus-contamination_53876-105342.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 15.99
+    },
+    {
+        "id": 8,
+        "title": "Guantes de nitrilo S-M-L",
+        "description": " ",
+        "stock": 300,
+        "unidad": "par",
+        "category": "nitrilo",
+        "images": "https://img.freepik.com/free-photo/high-angle-doctor-putting-gloves_23-2149551166.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 19.99
+    },
+    {
+        "id": 9,
+        "title": "Jeringas de 5 ml",
+        "description": " ",
+        "stock": 100,
+        "unidad": "unidad",
+        "category": "jeringas",
+        "images": "https://img.freepik.com/free-photo/covid-still-life-with-vaccine_23-2149079639.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 8.75
+    },
+    {
+        "id": 10,
+        "title": "Jeringas de 10 ml",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "jeringas",
+        "images": "https://images.unsplash.com/photo-1626351070167-9cd68c6d4244?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 12.00
+    },
+    {
+        "id": 11,
+        "title": "Tubos con EDTA para hemogramas 2,5ml",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "tubos",
+        "images": "https://img.freepik.com/free-photo/coronavirus-vaccine-lab-with-samples_23-2148920825.jpg?w=1060&t=st=1702418391~exp=1702418991~hmac=88aac430e030632e54c0c6432cffbc880872acf4ef5799fd5a3ce0e8e95b4b49",
+        "price": 35.50
+    },
+    {
+        "id": 12,
+        "title": "Tubos con citrato para coagulogramas",
+        "description": " ",
+        "stock": 30,
+        "unidad": "paquete",
+        "category": "Tubos de Extracción",
+        "images": "https://img.freepik.com/free-photo/flat-lay-vials-blue-background_23-2149341634.jpg?w=900&t=st=1702418002~exp=1702418602~hmac=5b1960528ff79eeaeb4ae18c2b8e9745ac2e73b57a0f01f0ec156498c5f55b8e",
+        "price": 28.75
+    },
+    {
+        "id": 13,
+        "title": "Pipetas Pasteur",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "varios",
+        "images": "https://img.freepik.com/free-photo/examining-purple-substance-petri-dish-with-pipette-while-conducting-coronavirus-research_181624-874.jpg?w=360&t=st=1702418812~exp=1702419412~hmac=45f38b044158cf0fd2c88a3ec366ea3af4e2da79005ce140c63322c1f157364e",
+        "price": 12.50
+    },
+    {
+        "id": 14,
+        "title": "Tubos secos para química",
+        "description": " ",
+        "stock": 100,
+        "unidad": "unidad",
+        "category": "tubos",
+        "images": "https://images.unsplash.com/photo-1599556147783-7edf67c327e0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 45.99
+    },
+    {
+        "id": 15,
+        "title": "Agujas 21G verde",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "agujas",
+        "images": "https://img.freepik.com/free-photo/covid-still-life-with-vaccine_23-2149079599.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 12.50
+    },
+    {
+        "id": 16,
+        "title": "Agujas 25G naranja",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "agujas",
+        "images": "https://img.freepik.com/free-photo/closeup-empty-syringe_53876-94994.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 12.50
+    }
+]
