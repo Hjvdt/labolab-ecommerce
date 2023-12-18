@@ -1,15 +1,18 @@
 import { View, Text, StyleSheet, ActivityIndicator, Image, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
 import products_data from '../data/products_data.json'
 import { useEffect, useState } from 'react'
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import { colors } from '../global/colors'
 
-const ProductDetailScreen = ({ productId }) => {
+const ProductDetailScreen = ({ route }) => {
   const [productSelected, setProductSelected] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const [isPortrait, setIsPortrait] = useState(true)
 
+
   const { height, width } = useWindowDimensions()
+
+  const productId = route.params
 
   useEffect(() => {
     height < width ? setIsPortrait(false) : setIsPortrait(true)
@@ -21,7 +24,7 @@ const ProductDetailScreen = ({ productId }) => {
     setProductSelected(productFound)
     setIsLoading(false)
   }
-    , [productId])
+  , [productId])
 
   return (
     <>
@@ -31,7 +34,6 @@ const ProductDetailScreen = ({ productId }) => {
           <ActivityIndicator />
           :
           <>
-            <Header title="Detalle del Producto" />
             <ScrollView >
               <Image
                 source={{ uri: productSelected.images }}
@@ -42,7 +44,7 @@ const ProductDetailScreen = ({ productId }) => {
                 <Text style={styles.title}>{productSelected.title}</Text>
                 <Text style={styles.description}>{productSelected.description}</Text>
                 <Text style={styles.price}>$ {productSelected.price}</Text>
-                <TouchableOpacity onPress={() => null}>
+                <TouchableOpacity style={isPortrait ? styles.buyButton : styles.buyAlt} onPress={() => null}>
                   <Text style={styles.buyText}>Comprar</Text>
                 </TouchableOpacity>
               </View>
@@ -84,16 +86,17 @@ const styles = StyleSheet.create({
     color: colors.secondary
   },
   buyButton: {
-    marginTop: 50,
+    marginTop: 10,
     width: 200,
-    padding: 50,
+    padding: 10,
     alignItems: 'center',
-    backgroundColor: 'green',
+    backgroundColor: "#5D3587",
     borderRadius: 10,
   },
   buyText: {
-    color: '#000'
+    color: '#fff'
   },
+  
   buyAlt: {
     marginTop: 10,
     width: 200,

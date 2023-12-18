@@ -3,9 +3,9 @@ import Card from './Card'
 import { colors } from '../global/colors'
 
 
-const CategoryItem = ({ category, onSelectCategoryEvent }) => {
+const CategoryItem = ({ category, navigation }) => {
     return (
-        <TouchableOpacity onPress={()=>onSelectCategoryEvent(category)}>
+        <TouchableOpacity onPress={()=>navigation.navigate("products",{category})}>
             <Card style={styles.cardContainer} elevation={5}>
                 <Text style={styles.text}>{category}</Text>
             </Card>
