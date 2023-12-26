@@ -8,9 +8,8 @@ import ProductDetailScreen from '../screens/ProductDetailScreen'
 
 const Stack = createNativeStackNavigator();
 
-const Navigator = () => {
+const ShopNavigator = () => {
     return (
-        <NavigationContainer>
             <Stack.Navigator
                 initialRouteName="C A T E G O R I A S"
                 screenOptions={
@@ -32,8 +31,7 @@ const Navigator = () => {
                     component={ProductDetailScreen}
                 />
             </Stack.Navigator>
-        </NavigationContainer>
     )
 }
 
-export default Navigator
+export default ShopNavigator

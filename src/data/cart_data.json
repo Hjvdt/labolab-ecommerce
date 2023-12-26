@@ -1,0 +1,24 @@
+[
+    {
+        "id": 2,
+        "title": "Pipetas",
+        "description": " ",
+        "stock": 50,
+        "unidad": "unidad",
+        "category": "vidrio",
+        "images": "https://img.freepik.com/foto-gratis/investigador-primer-plano-pipeta-tubo_23-2148794438.jpg?w=360&t=st=1702418261~exp=1702418861~hmac=fdd4c5fe2154ebd9da2bbad6a59208f29022239ea3de2ca0b83aa2485ebb329e",
+        "price": 12.50,
+        "quantity": 2
+    },
+    {
+        "id": 6,
+        "title": "Erlenmeyer",
+        "description": " ",
+        "stock": 3,
+        "unidad": "unidad",
+        "category": "vidrio",
+        "images": "https://img.freepik.com/free-photo/closeup-shot-tubes-inside-erlenmeyer-beakers_181624-34112.jpg?size=626&ext=jpg&ga=GA1.1.1717798470.1702416456&semt=ais",
+        "price": 22.50,
+        "quantity": 1
+    }
+]

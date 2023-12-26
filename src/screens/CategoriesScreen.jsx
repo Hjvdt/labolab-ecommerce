@@ -22,4 +22,7 @@ const CategoriesScreen = ({navigation}) => {
 export default CategoriesScreen
 
 const styles = StyleSheet.create({
+    categories:{
+        marginBottom:90,
+    }
 })

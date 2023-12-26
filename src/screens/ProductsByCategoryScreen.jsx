@@ -1,7 +1,6 @@
 import {View, Text, StyleSheet, FlatList} from 'react-native'
 import products_data from '../data/products_data.json'
 import ProductItem from '../components/ProductItem'
-// import Header from '../components/Header'
 import { useState, useEffect } from 'react'
 import Search from '../components/Search'
 
@@ -29,7 +28,6 @@ const ProductsByCategoryScreen = ({navigation, route}) => {
 
     return(
         <>
-        {/* <Header title="P R O D U C T O S" /> */}
         <Search onSearchHandlerEvent ={onSearch} />
         <FlatList
             data={productsByCategory}

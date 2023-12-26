@@ -1,17 +1,25 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text,Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 import { colors } from '../global/colors'
 
+const logo = require('../../assets/logoVdt4.png');
+
 const Header = ({ title, navigation }) => {
     return (
+        
         <View style={styles.headerContainer}>
-            <TouchableOpacity onPress={navigation.goBack}>
-                <AntDesign name="caretleft" size={20} color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={navigation.popToTop}>
-                <AntDesign name="home" size={24} color="white" />
-            </TouchableOpacity>
+            {
+                navigation.canGoBack()
+                    ?
+                    <TouchableOpacity onPress={navigation.goBack}>
+                        <AntDesign name="caretleft" size={20} color="white" />
+                    </TouchableOpacity>
+                    :
+                    <View></View>
+            }
+            <Image source={logo} style={styles.logo} />
             <Text style={styles.headerTitle}>{title}</Text>
+
         </View>
     )
 }
@@ -30,5 +38,12 @@ const styles = StyleSheet.create({
     headerTitle: {
         color: colors.htitle,
         fontFamily: 'Karla-Bold',
-    }
+        fontSize: 20,
+    },
+    logo: {
+        width: 90, 
+        height: 90, 
+        marginTop: 20,
+        marginRight: 95,
+    },
 })

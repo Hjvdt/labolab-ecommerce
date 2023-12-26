@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, ActivityIndicator, Image, TouchableOpacity, useWindowDimensions, ScrollView } from 'react-native'
 import products_data from '../data/products_data.json'
 import { useEffect, useState } from 'react'
-// import Header from '../components/Header'
 import { colors } from '../global/colors'
 
 const ProductDetailScreen = ({ route }) => {

@@ -2,7 +2,6 @@ import { Text, StyleSheet, TouchableOpacity } from "react-native"
 import Card from './Card'
 import { colors } from '../global/colors'
 
-
 const CategoryItem = ({ category, navigation }) => {
     return (
         <TouchableOpacity onPress={()=>navigation.navigate("products",{category})}>
