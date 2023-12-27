@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
       fontFamily: 'Karla-Bold'
     },
     confirmButton:{
-      backgroundColor: "#B08BBB",
+      backgroundColor: colors.cards,
       padding:10,
       borderRadius:10,
     },

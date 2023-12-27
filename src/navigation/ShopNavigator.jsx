@@ -1,5 +1,4 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
 import Header from "../components/Header";
 
 import CategoriesScreen from '../screens/CategoriesScreen'
