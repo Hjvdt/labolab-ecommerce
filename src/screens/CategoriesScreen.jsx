@@ -1,9 +1,11 @@
 import {View, Text, StyleSheet, FlatList} from 'react-native'
-import categories_data from '../data/categories_data.json'
 import CategoryItem from '../components/CategoryItem'
+import { useSelector } from 'react-redux'
+import { useGetCategoriesQuery } from '../services/shopService'
 
 const CategoriesScreen = ({navigation}) => {
-
+    const {data, isLoading, error} = useGetCategoriesQuery()
+    
     const renderCategoryItem = ({item}) => (
         <CategoryItem category={item} navigation={navigation} />
     )
@@ -11,7 +13,7 @@ const CategoriesScreen = ({navigation}) => {
     return(
         <>
         <FlatList
-            data={categories_data}
+            data={data}
             renderItem={renderCategoryItem}
             keyExtractor={item=>item}
         />
