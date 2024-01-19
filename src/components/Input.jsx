@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
         borderColor:colors.primary,
         borderRadius: 10,
         width: '90%',
-        backgroundColor: colors.primaryBack,
-        color: "#fff",
+        backgroundColor: colors.input,
+        color: colors.texto,
         padding: 8
     },
     label:{

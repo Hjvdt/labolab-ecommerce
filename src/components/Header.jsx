@@ -1,6 +1,7 @@
 import { View, Text,Image, StyleSheet, TouchableOpacity } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
-import { colors } from '../global/colors'
+import { colors } from '../global/colors';
+import {LinearGradient} from 'expo-linear-gradient';
 
 const logo = require('../../assets/logoVdt4.png');
 
@@ -8,6 +9,11 @@ const Header = ({ title, navigation }) => {
     return (
         
         <View style={styles.headerContainer}>
+            <LinearGradient 
+                colors={[colors.sombra, colors.primary,]}
+                style={styles.background}
+                end={{x:0.5, y: 0.7}}
+            />
             {
                 navigation.canGoBack()
                     ?
@@ -45,5 +51,12 @@ const styles = StyleSheet.create({
         height: 90, 
         marginTop: 20,
         marginRight: 95,
+    },
+    background: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        height: 100,
     },
 })

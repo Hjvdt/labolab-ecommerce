@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
     textConfirm:{
       fontFamily:'Karla-Bold',
       fontSize:16,
-      color: '#fff'
+      color: colors.texto,
     }  
   })

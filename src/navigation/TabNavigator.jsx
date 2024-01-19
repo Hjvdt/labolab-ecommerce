@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet } from "react-native";
-
+import ProfileNavigator from "./ProfileNavigator"
 import ShopNavigator from "./ShopNavigator";
 import CartNavigator from "./CartNavigator";
 import OrdersNavigator from "./OrdersNavigator";
@@ -46,6 +46,15 @@ const TabNavigator = () => {
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <FontAwesome name="reorder" size={24} color={focused ? "#fff" : "#ccc"} />
+                    )
+                }}
+            />
+            <Tab.Screen
+                name="ProfileStack"
+                component={ProfileNavigator}
+                options={{
+                    tabBarIcon: ({ focused }) => (
+                        <FontAwesome name="user-o" size={24} color={focused ? "#fff" : "#ccc"} />
                     )
                 }}
             />

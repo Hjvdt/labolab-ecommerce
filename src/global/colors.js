@@ -4,6 +4,11 @@ export const colors = {
     primaryBack: "#525274",
     gray: '#5C8374',
     htitle: '#FFFFFF',
-    cards: "#B08BBB",
+    cards: "#FFE5E5",
+    sombra: "#E9A8F2",
+    input: "#FAF6F0",
+    texto: "#1D2B53",
+    success: "#864AF9",
 }
 
+//// paletas: cards #FFE5E5 o #B08BBB

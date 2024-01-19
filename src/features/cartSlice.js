@@ -1,20 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const cartSlice = createSlice({
-    name:"cart",
-    initialState:{
+    name: "cart",
+    initialState: {
         user: "UserLogged",
         updatedAt: Date.now().toLocaleString(),
         total: 0,
         items: []
     },
-    reducers:{
-        addItem: (state, action)=>{
-            const isProductInCart = state.items.find(item=>item.id === action.payload.id)
-            if(!isProductInCart){
+    reducers: {
+        addItem: (state, action) => {
+            const isProductInCart = state.items.find(item => item.id === action.payload.id)
+            if (!isProductInCart) {
                 state.items.push(action.payload)
                 const total = state.items.reduce(
-                    (acc,current) => acc+= current.price*current.quantity,0
+                    (acc, current) => acc += current.price * current.quantity, 0
                 )
                 state.total = total
                 state = {
@@ -22,19 +22,19 @@ export const cartSlice = createSlice({
                     total,
                     updatedAt: Date.now().toLocaleString()
                 }
-            }else{
-                const itemsUpdated = state.items.map(item=>{
-                    if(item.id===action.payload.id){
-                        item.quantity+=action.payload.quantity
+            } else {
+                const itemsUpdated = state.items.map(item => {
+                    if (item.id === action.payload.id) {
+                        item.quantity += action.payload.quantity
                         return item
                     }
                     return item
                 })
                 const total = itemsUpdated.reduce(
-                    (acc,current) => acc+= current.price*current.quantity,0
+                    (acc, current) => acc += current.price * current.quantity, 0
                 )
                 state.total = total
-                state= {
+                state = {
                     ...state,
                     items: itemsUpdated,
                     total,
@@ -42,16 +42,32 @@ export const cartSlice = createSlice({
                 }
             }
         },
-        removeItem: (state, action)=>{
-            //Tarea para el hogar
+        removeItem: (state, action) => {
+            const { id } = action.payload;
+
+            // Find the index of the item with the specified ID
+            const itemIndex = state.items.findIndex((item) => item.id === id);
+
+            // If the item is found, remove it from the items array
+            if (itemIndex !== -1) {
+                const removedItem = state.items[itemIndex];
+                state.items.splice(itemIndex, 1);
+
+                // Update the total based on the removed item
+                state.total -= removedItem.price * removedItem.quantity;
+
+                // Update updatedAt timestamp
+                state.updatedAt = Date.now().toLocaleString();
+            }
         },
-        /* clearCart: (state) => {
-            state.items = [],
-            state.total = 0
-        } */
-    }
+    },
+    // clearCart: (state) => {
+    //     state.items = [],
+    //     state.total = 0
+    // },
+
 })
 
-export const {addItem, removeItem} = cartSlice.actions
+export const { addItem, removeItem } = cartSlice.actions
 
 export default cartSlice.reducer

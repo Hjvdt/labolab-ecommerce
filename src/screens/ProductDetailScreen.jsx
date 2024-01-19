@@ -25,8 +25,7 @@ const ProductDetailScreen = ({ route }) => {
 
 
   useEffect(() => {
-    // const productFound = products_data.find(product => product.id === productId)
-    // setProductSelected(productFound)
+    
     setIsLoading(false)
   }
   , [productId])
