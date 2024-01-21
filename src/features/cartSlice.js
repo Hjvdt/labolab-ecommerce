@@ -43,18 +43,6 @@ export const cartSlice = createSlice({
             }
         },
 
-        //     removeItem: (state, action) => {
-        //         const { id } = action.payload;
-        //         const itemIndex = state.items.findIndex((item) => item.id === id);
-
-        //         if (itemIndex !== -1) {
-        //             const removedItem = state.items[itemIndex];
-        //             state.items.splice(itemIndex, 1);
-        //             state.total -= removedItem.price * removedItem.quantity;
-        //             state.updatedAt = Date.now().toLocaleString();
-        //         }
-        //     },
-        // },
         removeItem: (state, action) => {
             const indexToRemove = state.items.findIndex(item => item.id === action.payload.id);
 
@@ -65,7 +53,7 @@ export const cartSlice = createSlice({
                 state.items = updateItems;
                 state.total = state.items.reduce((accumulator, currentItem) => accumulator += currentItem.price * currentItem.quantity, 0);
                 state.updatedAt = Date.now().toLocaleString();
-                // console.log(`Producto con id: ${indexToRemove} eliminado`)
+            
             }
         },
     },

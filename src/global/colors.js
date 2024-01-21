@@ -11,4 +11,3 @@ export const colors = {
     success: "#864AF9",
 }
 
-//// paletas: cards #FFE5E5 o #B08BBB
