@@ -1,4 +1,3 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet } from "react-native";
 import ProfileNavigator from "./ProfileNavigator"
@@ -73,8 +72,8 @@ const styles = StyleSheet.create({
         position: "absolute",
         left: 25,
         right: 25,
-        bottom: 25,
-        height: 60,
+        bottom: 5,
+        height: 40,
         borderRadius: 20,
     }
 })

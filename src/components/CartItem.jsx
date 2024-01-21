@@ -4,16 +4,16 @@ import { colors } from '../global/colors'
 import { Feather } from '@expo/vector-icons';
 
 
-const CartItem = ({ item }) => {
-
-
-
+const CartItem = ({ item, onRemoveItem }) => {
+    const handleRemoveItem = () => {
+        onRemoveItem(item.id)
+    }
     return (
         <Card style={styles.cartItemContainer}>
             <Image
                 style={styles.imageCartItem}
                 resizeMode='cover'
-                source={{ uri: item.thumbnail }}
+                source={{ uri: item.image }}
             />
             <View >
                 <Text style={styles.cartTitle}>{item.title}</Text>
@@ -23,7 +23,7 @@ const CartItem = ({ item }) => {
                     Cantidad: {item.quantity}, Total: ${item.price * item.quantity}
                 </Text>
             </View>
-            <TouchableOpacity style={styles.trashCart} onPress={null}>
+            <TouchableOpacity style={styles.trashCart} onPress={handleRemoveItem}>
                 <Feather name="trash" size={24} color="black" />
             </TouchableOpacity>
         </Card>
@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     imageCartItem: {
-        height: 50,
-        width: 50,
-        marginRight: 10,
+        height: 10,
+        width: 10,
+        marginRight: 1,
     },
     trashCart: {
         marginLeft: 'auto',

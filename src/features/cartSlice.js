@@ -42,32 +42,42 @@ export const cartSlice = createSlice({
                 }
             }
         },
+
+        //     removeItem: (state, action) => {
+        //         const { id } = action.payload;
+        //         const itemIndex = state.items.findIndex((item) => item.id === id);
+
+        //         if (itemIndex !== -1) {
+        //             const removedItem = state.items[itemIndex];
+        //             state.items.splice(itemIndex, 1);
+        //             state.total -= removedItem.price * removedItem.quantity;
+        //             state.updatedAt = Date.now().toLocaleString();
+        //         }
+        //     },
+        // },
         removeItem: (state, action) => {
-            const { id } = action.payload;
+            const indexToRemove = state.items.findIndex(item => item.id === action.payload.id);
 
-            // Find the index of the item with the specified ID
-            const itemIndex = state.items.findIndex((item) => item.id === id);
+            if (indexToRemove !== -1) {
+                const updateItems = [...state.items];
+                updateItems.splice(indexToRemove, 1);
 
-            // If the item is found, remove it from the items array
-            if (itemIndex !== -1) {
-                const removedItem = state.items[itemIndex];
-                state.items.splice(itemIndex, 1);
-
-                // Update the total based on the removed item
-                state.total -= removedItem.price * removedItem.quantity;
-
-                // Update updatedAt timestamp
+                state.items = updateItems;
+                state.total = state.items.reduce((accumulator, currentItem) => accumulator += currentItem.price * currentItem.quantity, 0);
                 state.updatedAt = Date.now().toLocaleString();
+                // console.log(`Producto con id: ${indexToRemove} eliminado`)
             }
         },
     },
-    // clearCart: (state) => {
-    //     state.items = [],
-    //     state.total = 0
-    // },
 
-})
+        clearCart: (state) => {
+            state.items = [],
+            state.total = 0
+        },
 
-export const { addItem, removeItem } = cartSlice.actions
+
+    })
+
+export const { addItem, removeItem, clearCart } = cartSlice.actions
 
 export default cartSlice.reducer

@@ -4,8 +4,13 @@ import { colors } from '../global/colors'
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { usePostOrderMutation } from '../services/shopService';
+import { useDispatch } from 'react-redux'
+import { removeItem } from '../features/cartSlice'
 
 const CartScreen = ({navigation}) => {
+
+  const dispatch = useDispatch()
+  const onRemoveItem = (id) => { dispatch(removeItem({ id })) }
 
     const cartItems = useSelector(state=>state.cartReducer.items) 
     const total = useSelector(state=>state.cartReducer.total)
@@ -13,10 +18,11 @@ const CartScreen = ({navigation}) => {
 
     const confirmCart = () => {
       triggerPost({total, cartItems, user: "LoggedUser"})
+      navigation.navigate('OrderStack')
     }
 
     const renderCartItem = ({item}) => (
-        <CartItem item={item} />
+        <CartItem item={item} onRemoveItem={onRemoveItem}/>
     )
 
     return (
