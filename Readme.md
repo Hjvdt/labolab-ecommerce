@@ -21,7 +21,7 @@
   - **_Navegación por Categorías:_** muestra las categorías de productos disponibles.
     ![foto1](https://github.com/Hjvdt/labolab-ecommerce/blob/main/assets/Categorias.png)
   - **_Navegación por Lista de Productos:_** muestra los productos disponibles dentro de cada categoría.
-    ![foto1](https://github.com/Hjvdt/labolab-ecommerce/blob/main/assets/Login.png)
+    ![foto1](https://github.com/Hjvdt/labolab-ecommerce/blob/main/assets/Productos.png)
   - **_Ver Productos Detallados:_** muestra los detalles del producto seleccionado.
     ![foto1](https://github.com/Hjvdt/labolab-ecommerce/blob/main/assets/Detalle%20y%20Agregar%20al%20carrito.png)
   - **_Agregar Producto al Carrito:_** Agrega el producto seleccionado al carrito.
