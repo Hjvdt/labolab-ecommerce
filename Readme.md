@@ -6,7 +6,7 @@
 
 ### Sobre el proyecto
 
-- Repositorio de Github: [React Native Ecommerce](https://github.com/Hjvdt/labolab-ecommerce.git)
+- Repositorio de Github: [React Native Ecommerce: Labolab-ecommerce](https://github.com/Hjvdt/labolab-ecommerce.git)
 - Autor: [Helga Van der Tuin]
 - Tipo: Aplicación de Tienda Online - Comercio Electrónico
 
