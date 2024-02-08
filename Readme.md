@@ -14,7 +14,7 @@
 
 - **La aplicación tiene las siguientes funciones:**
 
-  - **_Login (Iniciar sesión:)_** para ingresar a la aplicación. Verifique que el correo electrónico exista en la base de datos de Firebase y que la contraseña coincida con ese correo electrónico. Muestre mensajes de error si es necesario.(https://raw.githubusercontent.com/Hjvdt/labolab-ecommer/main/al/assets/Login.png)
+  - **_Login (Iniciar sesión:)_** para ingresar a la aplicación. Verifique que el correo electrónico exista en la base de datos de Firebase y que la contraseña coincida con ese correo electrónico. Muestre mensajes de error si es necesario.(https://github.com/Hjvdt/labolab-ecommerce/blob/main/assets/Login.png)
   - **_Regístrate:_** para crear una cuenta. Dispone de validaciones como comprobar que el correo electrónico tiene un formato correcto y que la contraseña tiene un mínimo de caracteres. Muestre mensajes de error si es necesario. Guarde la cuenta creada en la base de datos de Firebase.(https://raw.githubusercontent.com/Hjvdt/labolab-ecommer/main/al/asset/Registrarse.png)
   - **_Navegación por Categorías:_** muestra las categorías de productos disponibles.(https://raw.githubusercontent.com/Hjvdt/labolab-ecommer/main/al/assets/Categorias.png)
   - **_Navegación por Lista de Productos:_** muestra los productos disponibles dentro de cada categoría.(https://raw.githubusercontent.com/Hjvdt/labolab-ecommer/main/al/assets/Productosn.png)
