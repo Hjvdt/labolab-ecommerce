@@ -2,22 +2,27 @@ import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 import Card from './Card'
 import { Feather } from '@expo/vector-icons';
-import { colors } from '../global/colors';
 
-const OrderItem = ({ order, total }) => {
+const OrderItem = ({ order, setOrderId, setModalVisible }) => {
+    let date = new Date(order.createdAt)
+    date = date.toLocaleString()
     return (
         <Card style={styles.cartItemContainer}>
-            <View style={styles.itemContainer}>
-                <View style={styles.textContainer}>
-                    <Text style={styles.createdAt}>
-                        Creada el {new Date(order.createdAt).toLocaleString()}
-                    </Text>
-                    <Text style={styles.total}>Total: ${total}</Text>
-                </View>
-                <TouchableOpacity style={styles.searchIcon} onPress={null}>
-                    <Feather name="search" size={24} color="black" />
-                </TouchableOpacity>
+            <View >
+                <Text style={styles.createdAt}>
+                    Creada el {date}
+                </Text>
+                <Text style={styles.total}>Total: ${order.total}</Text>
             </View>
+            <TouchableOpacity style={styles.searchIcon}
+                onPress={() => {
+                    setOrderId(order.orderId)
+                    setModalVisible(true)
+                }
+                }
+            >
+                <Feather name="search" size={24} color="black" />
+            </TouchableOpacity>
         </Card>
     )
 }
@@ -30,27 +35,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
     },
-    itemContainer: {
-        backgroundColor: colors.sombra,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        width: '100%',
-        padding: 20,
-        borderRadius: 10,
-    },
-    textContainer: {
-        flexDirection: 'column',
-    },
     searchIcon: {
         marginLeft: 'auto',
     },
     createdAt: {
-        fontFamily: 'Karla-regular',
+        fontFamily: 'PlayfairDisplay-regular',
         marginBottom: 5,
     },
     total: {
-        fontFamily: 'Karla-Bold',
+        fontFamily: 'PlayfairDisplay-Bold',
         fontSize: 14,
     }
 })

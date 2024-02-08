@@ -4,7 +4,7 @@ const base_url = process.env.EXPO_PUBLIC_BASE_URL
 
 export const shopApi = createApi({
     reducerPath: "shopApi",
-    baseQuery: fetchBaseQuery({baseUrl:base_url}),
+    baseQuery: fetchBaseQuery({ baseUrl: base_url }),
     endpoints: (builder) => ({
         getCategories: builder.query({
             query: () => 'categories.json',
@@ -16,15 +16,18 @@ export const shopApi = createApi({
             query: (category) => `products.json?orderBy="category"&equalTo="${category}"`,
         }),
         postOrder: builder.mutation({
-            query: ({...order}) => ({
-                url: 'orders.json',
+            query: ({ ...order }) => ({
+                url: `orders/${order.localId}.json`,
                 method: 'POST',
                 body: order
             })
         }),
+        getOrders: builder.query({
+            query: (localId) => `orders/${localId}.json`
+        }),
         putProfilePicture: builder.mutation({
-            query: ({image, localId})=>({
-                url:  `profilePictures/${localId}.json`,
+            query: ({ image, localId }) => ({
+                url: `profilePictures/${localId}.json`,
                 method: 'PUT',
                 body: {
                     image: image,
@@ -32,14 +35,14 @@ export const shopApi = createApi({
             })
         }),
         getProfilePicture: builder.query({
-            query: (localId) => `profilePictures/${localId}.json` 
+            query: (localId) => `profilePictures/${localId}.json`
         }),
         getUserLocation: builder.query({
             query: (localId) => `locations/${localId}.json`
         }),
         putUserLocation: builder.mutation({
-            query: ({location, localId})=>({
-                url:  `locations/${localId}.json`,
+            query: ({ location, localId }) => ({
+                url: `locations/${localId}.json`,
                 method: 'PUT',
                 body: {
                     latitude: location.latitude,
@@ -52,10 +55,11 @@ export const shopApi = createApi({
 })
 
 export const {
-    useGetCategoriesQuery, 
-    useGetProductsQuery, 
-    useGetProductsByCategoryQuery, 
+    useGetCategoriesQuery,
+    useGetProductsQuery,
+    useGetProductsByCategoryQuery,
     usePostOrderMutation,
+    useGetOrdersQuery,
     usePutProfilePictureMutation,
     useGetProfilePictureQuery,
     useGetUserLocationQuery,

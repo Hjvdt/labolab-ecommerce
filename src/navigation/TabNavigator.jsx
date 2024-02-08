@@ -5,7 +5,7 @@ import ShopNavigator from "./ShopNavigator";
 import CartNavigator from "./CartNavigator";
 import OrdersNavigator from "./OrdersNavigator";
 import { colors } from "../global/colors";
-import { Entypo, AntDesign, FontAwesome } from '@expo/vector-icons';
+import { Entypo, AntDesign, FontAwesome,FontAwesome5, Fontisto, MaterialIcons } from '@expo/vector-icons';
 
 
 const Tab = createBottomTabNavigator()
@@ -26,7 +26,7 @@ const TabNavigator = () => {
                 component={ShopNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <Entypo name="shop" size={24} color={focused ? "#fff" : "#ccc"} />
+                        <Fontisto name="shopping-store" size={24} color="white" />
                     )
                 }}
             />
@@ -35,7 +35,7 @@ const TabNavigator = () => {
                 component={CartNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <AntDesign name="shoppingcart" size={24} color={focused ? "#fff" : "#ccc"} />
+                        <MaterialIcons name="add-shopping-cart" size={24} color="white" />
                     )
                 }}
             />
@@ -44,7 +44,7 @@ const TabNavigator = () => {
                 component={OrdersNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <FontAwesome name="reorder" size={24} color={focused ? "#fff" : "#ccc"} />
+                        <FontAwesome5 name="clipboard-list" size={24} color="white" />
                     )
                 }}
             />
@@ -53,7 +53,7 @@ const TabNavigator = () => {
                 component={ProfileNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <FontAwesome name="user-o" size={24} color={focused ? "#fff" : "#ccc"} />
+                        <FontAwesome name="user-circle-o" size={24} color="white" />
                     )
                 }}
             />

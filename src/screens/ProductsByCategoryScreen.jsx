@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, FlatList, ActivityIndicator} from 'react-native'
+import {StyleSheet, FlatList, ActivityIndicator} from 'react-native'
 import ProductItem from '../components/ProductItem'
 import { useState, useEffect } from 'react'
 import Search from '../components/Search'
@@ -44,6 +44,7 @@ const ProductsByCategoryScreen = ({navigation, route}) => {
                     data={productsByCategory}
                     renderItem={renderProductItem}
                     keyExtractor={item=>item.id}
+                    
                 />
             </>
         }

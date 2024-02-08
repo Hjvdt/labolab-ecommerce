@@ -28,25 +28,25 @@ export default Input
 
 const styles = StyleSheet.create({
     inputContainer: {
-        justifyContent:'center',
-        width: '70%'
+        justifyContent: 'center',
+        width: '80%'
     },
-    input:{
-        borderWidth:1,
-        borderColor:colors.primary,
-        borderRadius: 10,
+    input: {
+        borderWidth: 1,
+        borderColor: colors.primary,
+        borderRadius: 8,
         width: '90%',
         backgroundColor: colors.input,
         color: colors.texto,
         padding: 8
     },
-    label:{
-        fontFamily:'Karla-Bold',
+    label: {
+        fontFamily: 'PlayfairDisplay-Bold',
         color: "#fff",
-        paddingLeft:5,
-        marginBottom:4,
+        paddingLeft: 5,
+        marginBottom: 6,
     },
-    error:{
+    error: {
         padding: 10,
         color: "#FFF",
     }

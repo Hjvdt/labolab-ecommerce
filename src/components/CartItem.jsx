@@ -19,6 +19,7 @@ const CartItem = ({ item, onRemoveItem }) => {
                 <Text style={styles.cartTitle}>{item.title}</Text>
                 <Text style={styles.cartLightText}>{item.brand}</Text>
                 <Text style={styles.cartLightText}>${item.price} c/u</Text>
+                <Text style={styles.cartQuantity}>Cantidad: {item.quantity} c/u</Text>
                 <Text style={styles.cartTotalPrice}>
                     Cantidad: {item.quantity}, Total: ${item.price * item.quantity}
                 </Text>
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 20,
     },
+
     cartContenContainer: {
         flexDirection: 'row',
     },
@@ -50,16 +52,22 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
     },
     cartTitle: {
-        fontFamily: 'Karla-Bold',
+        fontFamily: 'PlayfairDisplay-Bold',
         textTransform: 'capitalize',
         fontSize: 20
     },
     cartLightText: {
-        fontFamily: 'Karla-regular',
+        fontFamily: 'PlayfairDisplay-regular',
         textTransform: 'capitalize',
         fontSize: 15,
-    }, cartTotalPrice: {
-        fontFamily: 'Karla-Bold',
+    },
+    cartQuantity: {
+        textTransform: 'capitalize',
+        fontSize: 14,
+        color: colors.greyLabel,
+    },
+    cartTotalPrice: {
+        fontFamily: 'PlayfairDisplay-Bold',
         textTransform: 'capitalize',
         fontSize: 16,
         color: colors.primary,

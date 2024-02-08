@@ -1,22 +1,26 @@
-import {View, Text, StyleSheet, FlatList} from 'react-native'
+import { StyleSheet, FlatList } from 'react-native'
 import CategoryItem from '../components/CategoryItem'
-import { useSelector } from 'react-redux'
 import { useGetCategoriesQuery } from '../services/shopService'
+import CustomError from '../components/CustomError'
 
-const CategoriesScreen = ({navigation}) => {
-    const {data, isLoading, error} = useGetCategoriesQuery()
-    
-    const renderCategoryItem = ({item}) => (
+const CategoriesScreen = ({ navigation }) => {
+    const { data, isLoading, error } = useGetCategoriesQuery()
+
+    const renderCategoryItem = ({ item }) => (
         <CategoryItem category={item} navigation={navigation} />
     )
 
-    return(
+    return (
         <>
-        <FlatList
-            data={data}
-            renderItem={renderCategoryItem}
-            keyExtractor={item=>item}
-        />
+            <FlatList
+                data={data}
+                renderItem={renderCategoryItem}
+                keyExtractor={item => item}
+            />
+            {
+                error &&
+                <CustomError error={error} />
+            }
         </>
     )
 }
@@ -24,7 +28,12 @@ const CategoriesScreen = ({navigation}) => {
 export default CategoriesScreen
 
 const styles = StyleSheet.create({
-    categories:{
-        marginBottom:90,
+    categories: {
+        marginBottom: 90,
+
+
+    },
+    categoryError: {
+
     }
 })

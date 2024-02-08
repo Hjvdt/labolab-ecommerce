@@ -2,12 +2,13 @@ import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity } from 'rea
 import { useState, useEffect } from 'react'
 import * as Location from 'expo-location'
 import MapPreview from './MapPreview'
-import { maps_api_key } from '../apis/googleCloud'
 import { setUserLocation } from '../features/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { usePutUserLocationMutation } from '../services/shopService'
 import { colors } from '../global/colors'
 import { getDistance } from 'geolib'
+
+const MAPS_API_KEY = process.env.EXPO_PUBLIC_MAPS_API_KEY;
 
 const LocationSelector = () => {
     const [location, setLocation] = useState("")
@@ -34,7 +35,7 @@ const LocationSelector = () => {
             async () => {
                 try {
                     if (location.latitude) {
-                        const urlReverseGeocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${maps_api_key}`
+                        const urlReverseGeocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${MAPS_API_KEY}`
                         const response = await fetch(urlReverseGeocode)
                         const data = await response.json()
                         const formattedAdress = await data.results[0].formatted_address
@@ -52,9 +53,6 @@ const LocationSelector = () => {
     }, [location])
 
 
-    console.log("error: ", error)
-    console.log("Address: ", address)
-
     const dispatch = useDispatch()
 
     const onConfirmAddress = () => {
@@ -63,7 +61,6 @@ const LocationSelector = () => {
             longitude: location.longitude,
             address: address
         }
-        console.log(localId)
         dispatch(setUserLocation(locationFormatted))
         triggerPutUserLocation({ location: locationFormatted, localId })
     }
@@ -109,7 +106,7 @@ const styles = StyleSheet.create({
         height: 200,
         borderWidth: 2,
         border: colors.success,
-        padding:10,
+        padding: 10,
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -121,14 +118,14 @@ const styles = StyleSheet.create({
         marginVertical: 1,
     },
     textBtn: {
-        fontFamily: 'Karla-regular',
+        fontFamily: 'PlayfairDisplay-regular',
         color: "#fff"
     }, textTitle: {
-        fontFamily: "Karla-Bold",
+        fontFamily: "PlayfairDisplay-Bold",
         fontSize: 16,
     },
     textAddress: {
-        fontFamily: 'Karla-regular'
+        fontFamily: 'PlayfairDisplay-regular'
     },
     textLocation: {
         fontFamily: 'Karla-Light',

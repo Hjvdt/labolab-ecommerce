@@ -9,5 +9,6 @@ export const colors = {
     input: "#FAF6F0",
     texto: "#1D2B53",
     success: "#864AF9",
+    spinner: '#F3FFB7',
 }
 

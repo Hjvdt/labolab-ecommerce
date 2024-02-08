@@ -1,1 +1,0 @@
-export const maps_api_key = 'AIzaSyBTyTc3NRcA_AeCgZlST1ylPKJ2QPqxI0s'
