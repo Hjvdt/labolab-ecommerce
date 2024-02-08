@@ -66,7 +66,7 @@
   ```
 - Abra el proyecto con [Visual Studio Code](https://code.visualstudio.com/) o su editor favorito:
   ```
-
+  code
   ```
 - Para probar el codigo, Ud. puede utilizar [Android Studio](https://developer.android.com/studio?hl=es-419), ábralo, cree un nuevo dispositivo, inicie el dispositivo creado.
   ```
@@ -77,6 +77,3 @@
   npx expo start
   ```
 - Cuando la aplicación se haya creado correctamente, si desea utilizar [Android Studio](https://developer.android.com/studio?hl=es-419), elija la opción \'a\' en la consola. También puede abrir la aplicación con su teléfono inteligente escaneando el código QR desde la aplicación [Expo Go](https://expo.dev/client).
-
-===============
-​
