@@ -1,4 +1,4 @@
-# React Native ecommerce app
+# Labolab-ecommerce app
 
 ### Helga Van der Tuin
 
