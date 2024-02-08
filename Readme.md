@@ -43,7 +43,7 @@
 
 ### Tecnologías y herramientas
 
-- [React Native] (https://reactnative.dev/)
+- [React Native](https://reactnative.dev/)
 - [CLI de la Expo](https://docs.expo.dev/more/expo-cli/)
 - [Redux](https://redux.js.org/)
 - [Expo](https://docs.expo.dev/)
