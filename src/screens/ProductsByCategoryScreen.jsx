@@ -9,9 +9,7 @@ const ProductsByCategoryScreen = ({navigation, route}) => {
 
     const [productsByCategory, setProductsByCategory] = useState([])
     const [search, setSearch] = useState('')
-
     const category = useSelector(state=>state.shopReducer.categorySelected)
-    
     const {data: productsFilteredByCategory, isLoading, error} = useGetProductsByCategoryQuery(category)
 
     useEffect(()=>{

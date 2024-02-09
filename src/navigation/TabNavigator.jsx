@@ -26,7 +26,7 @@ const TabNavigator = () => {
                 component={ShopNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <Fontisto name="shopping-store" size={24} color="white" />
+                        <Fontisto name="shopping-store" size={24} color={focused?"#fff":"#ccc"} />
                     )
                 }}
             />
@@ -35,7 +35,7 @@ const TabNavigator = () => {
                 component={CartNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <MaterialIcons name="add-shopping-cart" size={24} color="white" />
+                        <MaterialIcons name="add-shopping-cart" size={24} color={focused?"#fff":"#ccc"} />
                     )
                 }}
             />
@@ -44,7 +44,7 @@ const TabNavigator = () => {
                 component={OrdersNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <FontAwesome5 name="clipboard-list" size={24} color="white" />
+                        <FontAwesome5 name="clipboard-list" size={24} color={focused?"#fff":"#ccc"} />
                     )
                 }}
             />
@@ -53,7 +53,7 @@ const TabNavigator = () => {
                 component={ProfileNavigator}
                 options={{
                     tabBarIcon: ({ focused }) => (
-                        <FontAwesome name="user-circle-o" size={24} color="white" />
+                        <FontAwesome name="user-circle-o" size={24} color={focused?"#fff":"#ccc"} />
                     )
                 }}
             />

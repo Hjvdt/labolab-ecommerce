@@ -2,13 +2,14 @@ import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity } from 'rea
 import { useState, useEffect } from 'react'
 import * as Location from 'expo-location'
 import MapPreview from './MapPreview'
+import { maps_api_key } from '../apis/googleCloud'
 import { setUserLocation } from '../features/authSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { usePutUserLocationMutation } from '../services/shopService'
 import { colors } from '../global/colors'
 import { getDistance } from 'geolib'
 
-const MAPS_API_KEY = process.env.EXPO_PUBLIC_MAPS_API_KEY;
+// const maps_api_key = process.env.EXPO_PUBLIC_MAPS_API_KEY;
 
 const LocationSelector = () => {
     const [location, setLocation] = useState("")
@@ -35,7 +36,7 @@ const LocationSelector = () => {
             async () => {
                 try {
                     if (location.latitude) {
-                        const urlReverseGeocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${MAPS_API_KEY}`
+                        const urlReverseGeocode = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=${maps_api_key}`
                         const response = await fetch(urlReverseGeocode)
                         const data = await response.json()
                         const formattedAdress = await data.results[0].formatted_address

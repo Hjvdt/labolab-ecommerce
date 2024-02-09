@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import { colors } from '../global/colors'
 import { useDispatch } from 'react-redux'
 import { setProductIdSelected, setProductSelected } from '../features/shopSlice'
@@ -11,9 +11,7 @@ const ProductItem = ({ product, navigation }) => {
             dispatch(setProductSelected(product.id))
             navigation.navigate("DETALLE", product.id)
         }
-        }
-            style={styles.containerProductItem}>
-
+        } style={styles.containerProductItem}>
             <Text style={styles.productTitle}>{product.title}</Text>
             <Image
                 style={styles.productImage}

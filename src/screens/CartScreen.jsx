@@ -10,17 +10,17 @@ import cart from '../../assets/img/cart.png'
 const CartScreen = ({ navigation }) => {
 
   const localId = useSelector(state => state.authReducer.localId)
-  const dispatch = useDispatch()
-  const onRemoveItem = (id) => { dispatch(removeItem({ id })) }
   const cartItems = useSelector(state => state.cartReducer.items)
   const total = useSelector(state => state.cartReducer.total)
   const [triggerPost, result] = usePostOrderMutation()
+  const onRemoveItem = (id) => { dispatch(removeItem({ id })) }
+  const dispatch = useDispatch()
+
 
   const confirmCart = () => {
     const createdAt = Date.now()
     const orderId = Math.ceil(Math.random(1, 10) * 9000)
-    const orderData = { total, cartItems, localId: localId, createdAt: createdAt, orderId: orderId }
-
+    
     triggerPost({ total, cartItems, localId: localId, createdAt: createdAt, orderId: orderId })
       .then(() => {
         dispatch(clearCart({}));

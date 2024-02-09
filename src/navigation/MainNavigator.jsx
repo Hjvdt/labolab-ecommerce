@@ -4,8 +4,9 @@ import AuthNavigator from "./AuthNavigator";
 import { useSelector, useDispatch } from "react-redux";
 import { useGetProfilePictureQuery } from "../services/shopService";
 import { useEffect } from "react";
-import { setProfilePicture, setUserLocation } from "../features/authSlice";
+import { setProfilePicture, setUser, setUserLocation } from "../features/authSlice";
 import { useGetUserLocationQuery } from "../services/shopService";
+import { fetchSessions } from "../db";
 
 const MainNavigator = () => {
     const user = useSelector(state=>state.authReducer.user)

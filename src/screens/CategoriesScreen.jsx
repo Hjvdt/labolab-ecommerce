@@ -12,7 +12,7 @@ const CategoriesScreen = ({ navigation }) => {
 
     return (
         <>
-            <FlatList
+            <FlatList style={styles.categories}
                 data={data}
                 renderItem={renderCategoryItem}
                 keyExtractor={item => item}

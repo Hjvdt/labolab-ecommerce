@@ -13,8 +13,10 @@ const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [triggerLogIn, result] = useLogInMutation()
+ 
   const onSubmit = () => {
-    triggerLogIn({ email, password })
+  triggerLogIn({ email, password })
+    // triggerLogIn({ email:"example@example.com", password:"123456" })
     console.log(result)
   }
   const dispatch = useDispatch()
